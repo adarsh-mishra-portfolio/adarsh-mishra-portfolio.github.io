@@ -7,7 +7,7 @@ import {
   LuCircleCheck,
   LuClock,
 } from 'react-icons/lu';
-import { FaWhatsapp } from 'react-icons/fa6';
+import { FaWhatsapp, FaLinkedin } from 'react-icons/fa6';
 import { SectionHeader } from '../../components/common/SectionHeader';
 import { PERSONAL_INFO } from '../../data/portfolioData';
 
@@ -121,6 +121,23 @@ export const Contact: React.FC = () => {
                     </div>
                   </div>
                 </a>
+                {/* LinkedIn Profile */}
+                <a
+                  href={PERSONAL_INFO.linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 rounded-xl bg-[#0A66C2]/15 border border-[#0A66C2]/30 hover:border-[#38BDF8] hover:bg-[#0A66C2]/25 transition-all group"
+                >
+                  <div className="w-11 h-11 rounded-xl bg-[#071C33] border border-[#0A66C2]/40 flex items-center justify-center text-[#38BDF8] group-hover:scale-105 transition-transform shrink-0 shadow-sm">
+                    <FaLinkedin className="w-5 h-5 text-[#38BDF8]" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-xs text-[#38BDF8] font-semibold">LinkedIn Profile</div>
+                    <div className="text-xs sm:text-sm font-bold text-white truncate">
+                      linkedin.com/in/adarsh-mishra-795594310
+                    </div>
+                  </div>
+                </a>
               </div>
 
               {/* Quick Availability Snippet */}
@@ -140,14 +157,26 @@ export const Contact: React.FC = () => {
               <div className="text-xs text-[#CBD5E1] mb-2.5">
                 Need a comprehensive copy of my credentials?
               </div>
-              <a
-                href={PERSONAL_INFO.cvPath}
-                download={PERSONAL_INFO.cvFileName}
-                className="w-full inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-xl bg-[#F07832] hover:bg-[#D96320] text-white font-semibold text-sm shadow-lg shadow-[#F07832]/30 hover:shadow-xl transition-all cursor-pointer"
-              >
-                <LuDownload className="w-4 h-4" />
-                <span>Download Verified CV (PDF)</span>
-              </a>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <a
+                  href={PERSONAL_INFO.cvWordPath}
+                  download={PERSONAL_INFO.cvWordFileName}
+                  className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#F07832] hover:bg-[#D96320] text-white font-semibold text-xs sm:text-sm shadow-lg shadow-[#F07832]/30 hover:shadow-xl transition-all cursor-pointer"
+                  title="Download Latest CV in Word Format"
+                >
+                  <LuDownload className="w-4 h-4" />
+                  <span>Download CV (Word)</span>
+                </a>
+                <a
+                  href={PERSONAL_INFO.cvPdfPath}
+                  download={PERSONAL_INFO.cvPdfFileName}
+                  className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#0E335C] hover:bg-[#1E4D7A] text-[#38BDF8] hover:text-white font-semibold text-xs sm:text-sm border border-[#1E4D7A] transition-all cursor-pointer"
+                  title="Download Latest CV in PDF Format"
+                >
+                  <LuDownload className="w-4 h-4" />
+                  <span>Download CV (PDF)</span>
+                </a>
+              </div>
             </div>
           </div>
 

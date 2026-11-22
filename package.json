@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://YOUR-GITHUB-USERNAME.github.io/adarsh-mishra-portfolio/",
+  "homepage": "https://adarsh-mishra.github.io/adarsh-mishra-portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

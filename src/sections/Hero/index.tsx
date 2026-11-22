@@ -9,10 +9,11 @@ import {
   LuFileCheck,
   LuArrowDown,
   LuAnchor,
+  LuFileText,
 } from 'react-icons/lu';
-import { FaWhatsapp } from 'react-icons/fa6';
+import { FaWhatsapp, FaLinkedin } from 'react-icons/fa6';
 import { PERSONAL_INFO } from '../../data/portfolioData';
-import { getAssetUrl } from '../../utils/asset';
+import { HolographicCargoShowcase } from '../../components/logistics/HolographicCargoShowcase';
 
 export const Hero: React.FC = () => {
   return (
@@ -55,37 +56,61 @@ export const Hero: React.FC = () => {
               {PERSONAL_INFO.heroIntro}
             </p>
 
-            {/* Primary Action Buttons */}
-            <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-3.5 sm:gap-4">
-              {/* Download CV */}
-              <a
-                href={PERSONAL_INFO.cvPath}
-                download={PERSONAL_INFO.cvFileName}
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#F07832] hover:bg-[#D96320] text-white font-semibold text-sm sm:text-base shadow-lg shadow-[#F07832]/30 hover:shadow-xl transition-all transform hover:-translate-y-0.5 focus:outline-none cursor-pointer"
-              >
-                <LuDownload className="w-5 h-5" />
-                <span>Download CV</span>
-              </a>
+            {/* Primary Action Buttons - All 4 in one row on desktop */}
+            <div className="pt-2 flex flex-wrap sm:flex-nowrap items-center justify-center lg:justify-start gap-2 sm:gap-2.5">
+              {/* 1. Download CV (Word .DOCX with PDF quick-access) */}
+              <div className="inline-flex rounded-xl shadow-lg shadow-[#F07832]/25 overflow-hidden shrink-0">
+                <a
+                  href={PERSONAL_INFO.cvWordPath}
+                  download={PERSONAL_INFO.cvWordFileName}
+                  className="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-2.5 sm:py-3 bg-[#F07832] hover:bg-[#D96320] text-white font-semibold text-xs sm:text-sm transition-all focus:outline-none cursor-pointer whitespace-nowrap"
+                  title="Download CV in Word (.docx) Format"
+                >
+                  <LuDownload className="w-4 h-4 shrink-0" />
+                  <span>Download CV (Word)</span>
+                </a>
+                <a
+                  href={PERSONAL_INFO.cvPdfPath}
+                  download={PERSONAL_INFO.cvPdfFileName}
+                  className="inline-flex items-center gap-1 px-2.5 py-2.5 sm:py-3 bg-[#D96320] hover:bg-[#C2410C] text-white font-semibold text-[11px] sm:text-xs border-l border-white/20 transition-all focus:outline-none cursor-pointer whitespace-nowrap"
+                  title="Download as PDF"
+                >
+                  <LuFileText className="w-3.5 h-3.5 shrink-0" />
+                  <span>PDF</span>
+                </a>
+              </div>
 
-              {/* Contact Me */}
+              {/* 2. Contact Me */}
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#0E335C] hover:bg-[#1E4D7A] text-white font-semibold text-sm sm:text-base border border-[#1E4D7A] shadow-sm transition-all transform hover:-translate-y-0.5 focus:outline-none cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-[#0E335C] hover:bg-[#1E4D7A] text-white font-semibold text-xs sm:text-sm border border-[#1E4D7A] shadow-sm transition-all transform hover:-translate-y-0.5 focus:outline-none cursor-pointer shrink-0 whitespace-nowrap"
               >
-                <LuPhoneCall className="w-5 h-5 text-[#38BDF8]" />
+                <LuPhoneCall className="w-4 h-4 text-[#38BDF8] shrink-0" />
                 <span>Contact Me</span>
               </a>
 
-              {/* WhatsApp Quick Chat */}
+              {/* 3. WhatsApp Quick Chat */}
               <a
                 href={PERSONAL_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-[#25D366]/20 hover:bg-[#25D366]/30 text-[#25D366] font-semibold text-sm sm:text-base border border-[#25D366]/40 transition-all transform hover:-translate-y-0.5 cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-2.5 sm:py-3 rounded-xl bg-[#25D366]/20 hover:bg-[#25D366]/30 text-[#25D366] font-semibold text-xs sm:text-sm border border-[#25D366]/40 transition-all transform hover:-translate-y-0.5 cursor-pointer shrink-0 whitespace-nowrap"
                 title="Direct WhatsApp Inquiry"
               >
-                <FaWhatsapp className="w-5 h-5 text-[#25D366]" />
+                <FaWhatsapp className="w-4 h-4 text-[#25D366] shrink-0" />
                 <span>WhatsApp</span>
+              </a>
+
+              {/* 4. LinkedIn Profile */}
+              <a
+                href={PERSONAL_INFO.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-2.5 sm:py-3 rounded-xl bg-[#0A66C2]/20 hover:bg-[#0A66C2]/35 text-[#38BDF8] font-semibold text-xs sm:text-sm border border-[#0A66C2]/40 transition-all transform hover:-translate-y-0.5 cursor-pointer shrink-0 whitespace-nowrap"
+                title="Connect on LinkedIn"
+              >
+                <FaLinkedin className="w-4 h-4 text-[#38BDF8] shrink-0" />
+                <span>LinkedIn</span>
               </a>
             </div>
 
@@ -123,34 +148,12 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Visual Logistics Showcase Card */}
+          {/* Right Column: Holographic Cargo Showcase Card */}
           <div className="lg:col-span-5">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div className="relative bg-[#071C33] rounded-2xl border border-[#1E4D7A] overflow-hidden shadow-2xl">
-                {/* Visual Header Image: Container Ship */}
-                <div className="relative h-56 sm:h-64 overflow-hidden bg-[#0A223E]">
-                  <img
-                    src={getAssetUrl('assets/images/cargo-ship.jpg')}
-                    alt="International Container Cargo Ship"
-                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#071C33] via-[#071C33]/40 to-transparent" />
-                  
-                  {/* Floating Live Badge */}
-                  <div className="absolute top-3 right-3 bg-[#0B2545]/90 backdrop-blur-md px-3 py-1 rounded-full border border-[#1E4D7A] flex items-center gap-2 text-xs font-mono text-[#38BDF8] shadow-md">
-                    <span className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse" />
-                    <span className="font-semibold text-white">PORT OPERATIONS</span>
-                  </div>
-
-                  <div className="absolute bottom-3 left-4">
-                    <span className="px-2.5 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-[#F07832] text-white">
-                      Cross-Border Trade
-                    </span>
-                    <h3 className="text-lg font-bold text-white mt-1">
-                      International Logistics Hub
-                    </h3>
-                  </div>
-                </div>
+                {/* Holographic Auto-changing Export & Cargo Showcase */}
+                <HolographicCargoShowcase />
 
                 {/* Operations Key Highlights Card Body */}
                 <div className="p-5 sm:p-6 space-y-3.5 bg-[#071C33]">

@@ -7,7 +7,7 @@ import {
   LuDownload,
   LuShieldCheck,
 } from 'react-icons/lu';
-import { FaWhatsapp } from 'react-icons/fa6';
+import { FaWhatsapp, FaLinkedin } from 'react-icons/fa6';
 import { PERSONAL_INFO } from '../../data/portfolioData';
 
 export const Footer: React.FC = () => {
@@ -39,7 +39,17 @@ export const Footer: React.FC = () => {
               Dedicated to optimizing cross-border trade operations, ocean & air freight logistics, port operations, and statutory customs compliance.
             </p>
 
-            <div className="flex items-center gap-3 pt-2">
+            <div className="flex items-center gap-2.5 pt-2">
+              <a
+                href={PERSONAL_INFO.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-xl bg-[#0A66C2]/20 text-[#38BDF8] border border-[#0A66C2]/40 flex items-center justify-center hover:bg-[#0A66C2] hover:text-white transition-all shadow-sm"
+                title="Connect on LinkedIn"
+              >
+                <FaLinkedin className="w-4 h-4" />
+              </a>
+
               <a
                 href={PERSONAL_INFO.whatsappUrl}
                 target="_blank"
@@ -121,16 +131,29 @@ export const Footer: React.FC = () => {
               Official curriculum vitae detailing professional tenure at Neptune Petrochemicals, Asian Granito, and V Care Group.
             </p>
 
-            <a
-              href={PERSONAL_INFO.cvPath}
-              download={PERSONAL_INFO.cvFileName}
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#F07832] hover:bg-[#D96320] text-white text-xs font-semibold shadow-md transition-all cursor-pointer"
-            >
-              <LuDownload className="w-4 h-4" />
-              <span>Download Official CV (PDF)</span>
-            </a>
+            <div className="flex flex-wrap gap-2 pt-1">
+              <a
+                href={PERSONAL_INFO.cvWordPath}
+                download={PERSONAL_INFO.cvWordFileName}
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#F07832] hover:bg-[#D96320] text-white text-xs font-semibold shadow-md transition-all cursor-pointer"
+                title="Download CV in Word (.docx) Format"
+              >
+                <LuDownload className="w-3.5 h-3.5" />
+                <span>Download CV (Word)</span>
+              </a>
 
-            <div className="flex items-center gap-2 text-[11px] text-[#CBD5E1] pt-2">
+              <a
+                href={PERSONAL_INFO.cvPdfPath}
+                download={PERSONAL_INFO.cvPdfFileName}
+                className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-[#0E335C] hover:bg-[#1E4D7A] text-[#38BDF8] hover:text-white text-xs font-semibold border border-[#1E4D7A] transition-all cursor-pointer"
+                title="Download CV in PDF Format"
+              >
+                <LuDownload className="w-3.5 h-3.5" />
+                <span>PDF</span>
+              </a>
+            </div>
+
+            <div className="flex items-center gap-2 text-[11px] text-[#CBD5E1] pt-1">
               <LuShieldCheck className="w-4 h-4 text-[#10B981]" />
               <span>Verified Export & Import Executive Profile</span>
             </div>

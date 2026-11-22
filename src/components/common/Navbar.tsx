@@ -6,7 +6,7 @@ import {
   LuX,
   LuPhone,
 } from 'react-icons/lu';
-import { FaWhatsapp } from 'react-icons/fa6';
+import { FaWhatsapp, FaLinkedin } from 'react-icons/fa6';
 import { PERSONAL_INFO } from '../../data/portfolioData';
 
 interface NavItem {
@@ -102,7 +102,19 @@ export const Navbar: React.FC = () => {
           </nav>
 
           {/* Header Action Buttons */}
-          <div className="hidden sm:flex items-center gap-2.5">
+          <div className="hidden sm:flex items-center gap-2">
+            {/* LinkedIn */}
+            <a
+              href={PERSONAL_INFO.linkedinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-xl bg-[#0A66C2]/20 hover:bg-[#0A66C2]/35 text-[#38BDF8] border border-[#0A66C2]/40 transition-all hover:scale-102"
+              title="View LinkedIn Profile"
+            >
+              <FaLinkedin className="w-4 h-4 text-[#38BDF8]" />
+              <span className="hidden xl:inline">LinkedIn</span>
+            </a>
+
             {/* WhatsApp Quick Chat */}
             <a
               href={PERSONAL_INFO.whatsappUrl}
@@ -115,11 +127,12 @@ export const Navbar: React.FC = () => {
               <span className="hidden xl:inline">WhatsApp</span>
             </a>
 
-            {/* Download CV */}
+            {/* Download CV (Word .DOCX as requested) */}
             <a
               href={PERSONAL_INFO.cvPath}
               download={PERSONAL_INFO.cvFileName}
-              className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-xl bg-[#F07832] hover:bg-[#D96320] text-white shadow-sm transition-all shadow-[#F07832]/30 hover:shadow-md"
+              className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-xl bg-[#F07832] hover:bg-[#D96320] text-white shadow-sm transition-all shadow-[#F07832]/30 hover:shadow-md"
+              title="Download CV in Word (.docx) Format"
             >
               <LuDownload className="w-3.5 h-3.5" />
               <span>Download CV</span>
@@ -171,22 +184,31 @@ export const Navbar: React.FC = () => {
             })}
           </div>
 
-          <div className="pt-4 mt-2 border-t border-[#1E4D7A] grid grid-cols-2 gap-2">
+          <div className="pt-4 mt-2 border-t border-[#1E4D7A] grid grid-cols-3 gap-2">
             <a
               href={`tel:${PERSONAL_INFO.phone}`}
-              className="flex items-center justify-center gap-2 px-3 py-2.5 text-xs font-semibold rounded-xl bg-[#0E335C] text-white border border-[#1E4D7A]"
+              className="flex items-center justify-center gap-1.5 px-2 py-2.5 text-xs font-semibold rounded-xl bg-[#0E335C] text-white border border-[#1E4D7A]"
             >
               <LuPhone className="w-3.5 h-3.5 text-[#38BDF8]" />
-              <span>Call Now</span>
+              <span>Call</span>
             </a>
             <a
               href={PERSONAL_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-3 py-2.5 text-xs font-semibold rounded-xl bg-[#25D366]/20 text-[#25D366] border border-[#25D366]/40"
+              className="flex items-center justify-center gap-1.5 px-2 py-2.5 text-xs font-semibold rounded-xl bg-[#25D366]/20 text-[#25D366] border border-[#25D366]/40"
             >
               <FaWhatsapp className="w-3.5 h-3.5" />
               <span>WhatsApp</span>
+            </a>
+            <a
+              href={PERSONAL_INFO.linkedinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-1.5 px-2 py-2.5 text-xs font-semibold rounded-xl bg-[#0A66C2]/20 text-[#38BDF8] border border-[#0A66C2]/40"
+            >
+              <FaLinkedin className="w-3.5 h-3.5" />
+              <span>LinkedIn</span>
             </a>
           </div>
         </div>

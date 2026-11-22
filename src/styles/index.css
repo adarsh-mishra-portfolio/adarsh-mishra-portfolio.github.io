@@ -64,3 +64,22 @@
 .ocean-wave-glow {
   background: radial-gradient(ellipse 90% 60% at 50% -15%, rgba(56, 189, 248, 0.12), transparent 75%);
 }
+
+/* Holographic scanline animation */
+@keyframes scanline {
+  0% {
+    transform: translateY(0);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(280px);
+    opacity: 0.2;
+  }
+}
+
+.animate-scanline {
+  animation: scanline 4s linear infinite;
+}

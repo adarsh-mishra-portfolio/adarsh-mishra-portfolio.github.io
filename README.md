@@ -2,19 +2,25 @@
 
 A modern, responsive, corporate portfolio website tailored specifically for **Adarsh Mishra**, an **Export & Import Executive** specializing in international trade, ocean freight, air cargo, inland container logistics, customs clearance, and global supply chain coordination.
 
-Target Live URL:
-`https://YOUR-GITHUB-USERNAME.github.io/adarsh-mishra-portfolio/`
+Live Website URL:
+`https://adarsh-mishra.github.io/adarsh-mishra-portfolio/`
+
+Professional Profiles:
+- **LinkedIn**: [https://www.linkedin.com/in/adarsh-mishra-795594310](https://www.linkedin.com/in/adarsh-mishra-795594310)
+- **Portfolio**: [https://adarsh-mishra.github.io/adarsh-mishra-portfolio/](https://adarsh-mishra.github.io/adarsh-mishra-portfolio/)
 
 ---
 
 ## ⚓ Key Highlights & Architecture
 
-- **Industry-Specific Design**: Tailored for global trade, shipping lines, customs broking (CHA), container freight stations (CFS), and multi-modal logistics.
-- **Corporate Color Palette**: Deep Navy Blue (`#0B192C` primary), Clean White (`#FFFFFF`), Light Slate (`#F8FAFC` secondary), and Energetic Maritime Orange (`#EA580C` accent).
-- **Multi-Modal Cargo Showcase**: Dedicated interactive modules for Ocean Cargo (Container Vessels, FCL/LCL), Air Freight (AWB clearance), and Intermodal Rail/Road (ICD dry ports).
+- **Industry-Specific Design**: Tailored for global trade, ocean shipping lines, customs broking (CHA), container freight stations (CFS), and multi-modal logistics.
+- **Ocean Blue Corporate Palette**: Rich Maritime Ocean Blue (`#0B2545` / `#0D3358` / `#071C33`), High-Visibility Cargo Orange (`#F07832`), Sky Cyan (`#38BDF8`), and Crisp Text (`#FFFFFF` & `#CBD5E1`).
+- **Holographic Cargo Showcase**: Auto-changing holographic slider featuring Ocean Vessels, Air Cargo, Intermodal Rail, Port Terminals, and Bonded Warehouses with live HUD coordinates and bullet navigation.
+- **Equal Card Heights**: All dual-column sections (Contact and Skills) are engineered with flexbox `items-stretch` and matching pixel heights.
+- **Multi-Modal Freight Showcase**: Interactive modules for Ocean Cargo (Container Vessels, FCL/LCL), Air Freight (AWB clearance), and Intermodal Rail/Road (ICD dry ports).
 - **End-to-End Trade Lifecycle**: 6-phase visual walkthrough from Order Planning to Customs Clearance and final IDPMS bank closures.
-- **Genuine CV Integration**: Direct download of the authentic `Adarsh-Mishra-CV.pdf` directly derived from the supplied CV.
-- **Direct Executive Inquiries**: Click-to-call (`+91 96951 42996`), click-to-email (`adarshmishra8524@gmail.com`), and 1-click WhatsApp instant chat integration.
+- **Verified CV Integration**: Direct downloads for both **Word format (`Adarsh-Mishra-CV.docx`)** and **PDF format (`Adarsh-Mishra-CV.pdf`)** containing clickable LinkedIn and Portfolio URLs.
+- **Direct Executive Inquiries**: Click-to-call (`+91 96951 42996`), click-to-email (`adarshmishra8524@gmail.com`), 1-click WhatsApp instant chat, and LinkedIn direct profile link.
 - **Automated Deployment**: GitHub Actions workflow (`.github/workflows/deploy.yml`) ready for GitHub Pages hosting on push to `main`.
 - **Zero Hallucinations**: All professional milestones, employment tenures, educational scores, and skills strictly reflect the supplied curriculum vitae.
 
@@ -29,7 +35,8 @@ adarsh-mishra-portfolio/
 │       └── deploy.yml            # Automated GitHub Pages CI/CD workflow
 ├── public/
 │   ├── assets/
-│   │   ├── Adarsh-Mishra-CV.pdf  # Genuine CV file for download
+│   │   ├── Adarsh-Mishra-CV.docx # Latest Word CV document for download
+│   │   ├── Adarsh-Mishra-CV.pdf  # Generated PDF CV with verified links
 │   │   └── images/               # High-resolution logistics & freight imagery
 │   │       ├── cargo-ship.jpg
 │   │       ├── cargo-plane.jpg
@@ -40,12 +47,13 @@ adarsh-mishra-portfolio/
 ├── src/
 │   ├── components/
 │   │   ├── common/
-│   │   │   ├── Navbar.tsx        # Responsive navigation with active spy & WhatsApp pill
-│   │   │   ├── SectionHeader.tsx # Reusable corporate section header
+│   │   │   ├── Navbar.tsx        # Responsive navigation with active spy, LinkedIn & WhatsApp
+│   │   │   ├── SectionHeader.tsx # Reusable corporate section header (no wavy underlines)
 │   │   │   └── Footer.tsx        # Corporate footer with back-to-top & quick links
 │   │   └── logistics/
-│   │       ├── LogisticsShowcase.tsx # Multi-modal transport switcher (Sea, Air, Rail)
-│   │       └── TradeLifecycle.tsx    # 6-step export-import lifecycle
+│   │       ├── HolographicCargoShowcase.tsx # Auto-changing holographic cargo HUD slider
+│   │       ├── LogisticsShowcase.tsx        # Multi-modal transport switcher (Sea, Air, Rail)
+│   │       └── TradeLifecycle.tsx           # 6-step export-import lifecycle
 │   ├── data/
 │   │   └── portfolioData.ts      # Verifiable data (experience, education, skills, contact)
 │   ├── sections/
@@ -55,9 +63,9 @@ adarsh-mishra-portfolio/
 │   │   ├── CoreExpertise/        # 8 Visual competence cards (BOE, IDPMS, customs, freight)
 │   │   ├── Education/            # B.A Graduate (8.6 CGPA), 12th (8 GPA), 10th (7 GPA)
 │   │   ├── Skills/               # Technical skills, compliance frameworks, languages
-│   │   └── Contact/              # Phone, email, WhatsApp, interactive inquiry form
+│   │   └── Contact/              # Phone, email, WhatsApp, LinkedIn, interactive inquiry form
 │   ├── styles/
-│   │   └── index.css             # Tailwind v4 theme, maritime grid patterns
+│   │   └── index.css             # Ocean Blue theme, holographic scanline animation
 │   ├── utils/
 │   │   ├── asset.ts              # Robust base-path-aware asset resolver
 │   │   └── cn.ts                 # Classname utility
@@ -145,10 +153,10 @@ git branch -M main
 git add .
 
 # Commit changes
-git commit -m "feat: initial commit - Adarsh Mishra Export & Import Executive portfolio"
+git commit -m "feat: complete professional portfolio for Adarsh Mishra - Export & Import Executive"
 
-# Link your remote GitHub repository (replace YOUR-GITHUB-USERNAME with your actual GitHub username)
-git remote add origin https://github.com/YOUR-GITHUB-USERNAME/adarsh-mishra-portfolio.git
+# Link your remote GitHub repository
+git remote add origin https://github.com/adarsh-mishra/adarsh-mishra-portfolio.git
 
 # Push code to main
 git push -u origin main
@@ -156,7 +164,7 @@ git push -u origin main
 
 ### Step 3: Enable GitHub Actions for GitHub Pages
 1. Go to your repository on GitHub:
-   `https://github.com/YOUR-GITHUB-USERNAME/adarsh-mishra-portfolio`
+   `https://github.com/adarsh-mishra/adarsh-mishra-portfolio`
 2. Click on the **Settings** tab.
 3. In the left navigation menu, click on **Pages** (under the "Code and automation" section).
 4. Under **Build and deployment** > **Source**, choose:
@@ -167,7 +175,7 @@ git push -u origin main
 6. Click the **Actions** tab to watch the deployment build and publish.
 7. Once finished (typically ~60 seconds), your live portfolio will be available at:
    ```
-   https://YOUR-GITHUB-USERNAME.github.io/adarsh-mishra-portfolio/
+   https://adarsh-mishra.github.io/adarsh-mishra-portfolio/
    ```
 
 ---
@@ -178,7 +186,9 @@ git push -u origin main
 - [x] **Exact employment details**: All 3 companies (Neptune Petrochemicals, Asian Granito, V Care Group) and their exact dates and responsibilities preserved without alterations.
 - [x] **Exact educational details**: B.A Graduate (8.6 CGPA), 12th (8 GPA), 10th (7 GPA) from Raja Harpal Singh Mahavidyalaya.
 - [x] **No fake ratings or invented statistics**: Clean categorical visual cards without fabricated proficiency percentages.
-- [x] **Genuine CV**: Directly downloadable `Adarsh-Mishra-CV.pdf` generated from the original curriculum vitae.
+- [x] **Word CV & PDF CV Downloads**: Downloads `Adarsh-Mishra-CV.docx` as primary format and `Adarsh-Mishra-CV.pdf` as secondary format.
+- [x] **Verified Links**: Both CV documents and website include `https://www.linkedin.com/in/adarsh-mishra-795594310` and `https://adarsh-mishra.github.io/adarsh-mishra-portfolio/`.
+- [x] **Holographic Cargo Showcase**: Auto-changing cargo slider with HUD radar telemetry and bullet point navigation.
 - [x] **Click-to-Call & Email**: Configured for `+91 96951 42996` and `adarshmishra8524@gmail.com`.
 - [x] **WhatsApp Integration**: Instant chat link to `+91 96951 42996`.
 - [x] **Zero broken links & clean build**: Tested with Vite and TypeScript compiler.
