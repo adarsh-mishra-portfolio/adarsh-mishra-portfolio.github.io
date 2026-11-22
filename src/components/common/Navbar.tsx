@@ -5,6 +5,7 @@ import {
   LuMenu,
   LuX,
   LuPhone,
+  LuFileText,
 } from 'react-icons/lu';
 import { FaWhatsapp, FaLinkedin } from 'react-icons/fa6';
 import { PERSONAL_INFO } from '../../data/portfolioData';
@@ -127,27 +128,48 @@ export const Navbar: React.FC = () => {
               <span className="hidden xl:inline">WhatsApp</span>
             </a>
 
-            {/* Download CV (Word .DOCX as requested) */}
-            <a
-              href={PERSONAL_INFO.cvPath}
-              download={PERSONAL_INFO.cvFileName}
-              className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-xl bg-[#F07832] hover:bg-[#D96320] text-white shadow-sm transition-all shadow-[#F07832]/30 hover:shadow-md"
-              title="Download CV in Word (.docx) Format"
-            >
-              <LuDownload className="w-3.5 h-3.5" />
-              <span>Download CV</span>
-            </a>
+            {/* Download CV (Word & PDF) */}
+            <div className="inline-flex rounded-xl overflow-hidden shadow-sm shadow-[#F07832]/25">
+              <a
+                href={PERSONAL_INFO.cvWordPath}
+                download={PERSONAL_INFO.cvWordFileName}
+                className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold bg-[#F07832] hover:bg-[#D96320] text-white transition-all cursor-pointer"
+                title="Download CV in Word (.docx) Format"
+              >
+                <LuDownload className="w-3.5 h-3.5" />
+                <span>Word</span>
+              </a>
+              <a
+                href={PERSONAL_INFO.cvPdfPath}
+                download={PERSONAL_INFO.cvPdfFileName}
+                className="inline-flex items-center gap-1 px-2.5 py-2 text-xs font-semibold bg-[#D96320] hover:bg-[#C2410C] text-white border-l border-white/20 transition-all cursor-pointer"
+                title="Download CV in PDF Format"
+              >
+                <LuFileText className="w-3.5 h-3.5" />
+                <span>PDF</span>
+              </a>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex items-center gap-1.5 lg:hidden">
             <a
-              href={PERSONAL_INFO.cvPath}
-              download={PERSONAL_INFO.cvFileName}
-              className="inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-[#F07832] text-white shadow-sm"
+              href={PERSONAL_INFO.cvPdfPath}
+              download={PERSONAL_INFO.cvPdfFileName}
+              className="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-[#D96320] text-white shadow-sm"
+              title="Download PDF CV"
+            >
+              <LuFileText className="w-3 h-3" />
+              <span>PDF</span>
+            </a>
+            <a
+              href={PERSONAL_INFO.cvWordPath}
+              download={PERSONAL_INFO.cvWordFileName}
+              className="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-[#F07832] text-white shadow-sm"
+              title="Download Word CV"
             >
               <LuDownload className="w-3 h-3" />
-              <span className="hidden xs:inline">CV</span>
+              <span>Word</span>
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -209,6 +231,27 @@ export const Navbar: React.FC = () => {
             >
               <FaLinkedin className="w-3.5 h-3.5" />
               <span>LinkedIn</span>
+            </a>
+          </div>
+
+          <div className="pt-2 grid grid-cols-2 gap-2">
+            <a
+              href={PERSONAL_INFO.cvPdfPath}
+              download={PERSONAL_INFO.cvPdfFileName}
+              className="flex items-center justify-center gap-1.5 px-2 py-2 text-xs font-semibold rounded-xl bg-[#D96320] text-white"
+              title="Download CV in PDF Format"
+            >
+              <LuFileText className="w-3.5 h-3.5" />
+              <span>Download PDF</span>
+            </a>
+            <a
+              href={PERSONAL_INFO.cvWordPath}
+              download={PERSONAL_INFO.cvWordFileName}
+              className="flex items-center justify-center gap-1.5 px-2 py-2 text-xs font-semibold rounded-xl bg-[#F07832] text-white"
+              title="Download CV in Word (.docx) Format"
+            >
+              <LuDownload className="w-3.5 h-3.5" />
+              <span>Download Word</span>
             </a>
           </div>
         </div>

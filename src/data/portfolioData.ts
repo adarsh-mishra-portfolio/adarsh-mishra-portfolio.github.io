@@ -57,9 +57,9 @@ export const PERSONAL_INFO = {
   whatsappUrl:
     'https://wa.me/919695142996?text=Hi%20Adarsh,%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20export/import%20inquiry.',
   linkedinUrl: 'https://www.linkedin.com/in/adarsh-mishra-795594310',
-  portfolioUrl: 'https://adarsh-mishra.github.io/adarsh-mishra-portfolio/',
-  cvPath: getAssetUrl('assets/Adarsh-Mishra-CV.docx'),
-  cvFileName: 'Adarsh-Mishra-CV.docx',
+  portfolioUrl: 'https://adarsh-mishra-portfolio.github.io/',
+  cvPath: getAssetUrl('assets/Adarsh-Mishra-CV.pdf'),
+  cvFileName: 'Adarsh-Mishra-CV.pdf',
   cvWordPath: getAssetUrl('assets/Adarsh-Mishra-CV.docx'),
   cvWordFileName: 'Adarsh-Mishra-CV.docx',
   cvPdfPath: getAssetUrl('assets/Adarsh-Mishra-CV.pdf'),

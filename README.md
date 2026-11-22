@@ -3,11 +3,11 @@
 A modern, responsive, corporate portfolio website tailored specifically for **Adarsh Mishra**, an **Export & Import Executive** specializing in international trade, ocean freight, air cargo, inland container logistics, customs clearance, and global supply chain coordination.
 
 Live Website URL:
-`https://adarsh-mishra.github.io/adarsh-mishra-portfolio/`
+`https://adarsh-mishra-portfolio.github.io/`
 
 Professional Profiles:
 - **LinkedIn**: [https://www.linkedin.com/in/adarsh-mishra-795594310](https://www.linkedin.com/in/adarsh-mishra-795594310)
-- **Portfolio**: [https://adarsh-mishra.github.io/adarsh-mishra-portfolio/](https://adarsh-mishra.github.io/adarsh-mishra-portfolio/)
+- **Portfolio**: [https://adarsh-mishra-portfolio.github.io/](https://adarsh-mishra-portfolio.github.io/)
 
 ---
 
@@ -124,47 +124,24 @@ npm run preview
 
 ## 🌐 Publishing to GitHub & GitHub Pages
 
-Follow these exact steps to publish this portfolio to your GitHub account and activate GitHub Pages:
+Follow these exact steps to publish this portfolio to your GitHub Organization Pages and activate GitHub Pages:
 
-### Step 1: Create a New Repository on GitHub
-1. Log in to your GitHub account: [https://github.com](https://github.com).
-2. Click the **+** (plus icon) in the top right corner and select **New repository**.
-3. Set the Repository name to:
-   ```
-   adarsh-mishra-portfolio
-   ```
-4. Set the visibility to **Public**.
-5. Do **NOT** initialize with a README, .gitignore, or license (these are already configured locally).
-6. Click **Create repository**.
-
-### Step 2: Initialize Git and Push Locally
-Open your terminal (PowerShell or Git Bash) in the project directory:
-
-```bash
-cd "c:\Users\Rohit Tiwari\OneDrive\Desktop\AI-WORKS\adarsh-mishra-portfolio"
-
-# Initialize git repository
-git init
-
-# Set the primary branch to main
-git branch -M main
-
-# Add all files to staging
-git add .
-
-# Commit changes
-git commit -m "feat: complete professional portfolio for Adarsh Mishra - Export & Import Executive"
-
-# Link your remote GitHub repository
-git remote add origin https://github.com/adarsh-mishra/adarsh-mishra-portfolio.git
-
-# Push code to main
-git push -u origin main
+### Step 1: GitHub Organization Repository
+The repository is set up under the GitHub Organization:
 ```
+adarsh-mishra-portfolio/adarsh-mishra-portfolio.github.io
+```
+Visibility: **Public**
+
+### Step 2: Review & Commit in GitHub Desktop
+1. Open **GitHub Desktop**.
+2. Select repository **adarsh-mishra-portfolio.github.io**.
+3. Review changes, enter a commit message (e.g., `feat: prepare portfolio for GitHub Organization Pages deployment`), and click **Commit to main**.
+4. Click **Push origin** to push commits to GitHub.
 
 ### Step 3: Enable GitHub Actions for GitHub Pages
 1. Go to your repository on GitHub:
-   `https://github.com/adarsh-mishra/adarsh-mishra-portfolio`
+   `https://github.com/adarsh-mishra-portfolio/adarsh-mishra-portfolio.github.io`
 2. Click on the **Settings** tab.
 3. In the left navigation menu, click on **Pages** (under the "Code and automation" section).
 4. Under **Build and deployment** > **Source**, choose:
@@ -175,7 +152,7 @@ git push -u origin main
 6. Click the **Actions** tab to watch the deployment build and publish.
 7. Once finished (typically ~60 seconds), your live portfolio will be available at:
    ```
-   https://adarsh-mishra.github.io/adarsh-mishra-portfolio/
+   https://adarsh-mishra-portfolio.github.io/
    ```
 
 ---
@@ -187,7 +164,7 @@ git push -u origin main
 - [x] **Exact educational details**: B.A Graduate (8.6 CGPA), 12th (8 GPA), 10th (7 GPA) from Raja Harpal Singh Mahavidyalaya.
 - [x] **No fake ratings or invented statistics**: Clean categorical visual cards without fabricated proficiency percentages.
 - [x] **Word CV & PDF CV Downloads**: Downloads `Adarsh-Mishra-CV.docx` as primary format and `Adarsh-Mishra-CV.pdf` as secondary format.
-- [x] **Verified Links**: Both CV documents and website include `https://www.linkedin.com/in/adarsh-mishra-795594310` and `https://adarsh-mishra.github.io/adarsh-mishra-portfolio/`.
+- [x] **Verified Links**: Website and profiles include `https://www.linkedin.com/in/adarsh-mishra-795594310` and `https://adarsh-mishra-portfolio.github.io/`.
 - [x] **Holographic Cargo Showcase**: Auto-changing cargo slider with HUD radar telemetry and bullet point navigation.
 - [x] **Click-to-Call & Email**: Configured for `+91 96951 42996` and `adarshmishra8524@gmail.com`.
 - [x] **WhatsApp Integration**: Instant chat link to `+91 96951 42996`.
