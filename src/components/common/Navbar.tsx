@@ -103,7 +103,7 @@ export const Navbar: React.FC = () => {
           </nav>
 
           {/* Header Action Buttons */}
-          <div className="hidden sm:flex items-center gap-2">
+          <div className="hidden lg:flex items-center gap-2">
             {/* LinkedIn */}
             <a
               href={PERSONAL_INFO.linkedinUrl}
@@ -127,50 +127,10 @@ export const Navbar: React.FC = () => {
               <FaWhatsapp className="w-4 h-4 text-[#25D366]" />
               <span className="hidden xl:inline">WhatsApp</span>
             </a>
-
-            {/* Download CV (Word & PDF) */}
-            <div className="inline-flex rounded-xl overflow-hidden shadow-sm shadow-[#F07832]/25">
-              <a
-                href={PERSONAL_INFO.cvWordPath}
-                download={PERSONAL_INFO.cvWordFileName}
-                className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold bg-[#F07832] hover:bg-[#D96320] text-white transition-all cursor-pointer"
-                title="Download CV in Word (.docx) Format"
-              >
-                <LuDownload className="w-3.5 h-3.5" />
-                <span>Word</span>
-              </a>
-              <a
-                href={PERSONAL_INFO.cvPdfPath}
-                download={PERSONAL_INFO.cvPdfFileName}
-                className="inline-flex items-center gap-1 px-2.5 py-2 text-xs font-semibold bg-[#D96320] hover:bg-[#C2410C] text-white border-l border-white/20 transition-all cursor-pointer"
-                title="Download CV in PDF Format"
-              >
-                <LuFileText className="w-3.5 h-3.5" />
-                <span>PDF</span>
-              </a>
-            </div>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center gap-1.5 lg:hidden">
-            <a
-              href={PERSONAL_INFO.cvPdfPath}
-              download={PERSONAL_INFO.cvPdfFileName}
-              className="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-[#D96320] text-white shadow-sm"
-              title="Download PDF CV"
-            >
-              <LuFileText className="w-3 h-3" />
-              <span>PDF</span>
-            </a>
-            <a
-              href={PERSONAL_INFO.cvWordPath}
-              download={PERSONAL_INFO.cvWordFileName}
-              className="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-[#F07832] text-white shadow-sm"
-              title="Download Word CV"
-            >
-              <LuDownload className="w-3 h-3" />
-              <span>Word</span>
-            </a>
+          <div className="flex items-center lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-xl text-white hover:bg-[#0E335C] border border-[#1E4D7A] focus:outline-none"
